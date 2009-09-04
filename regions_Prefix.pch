@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'regions' target in the 'regions' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

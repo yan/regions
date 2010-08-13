@@ -1,1 +1,11 @@
-.
+A few things to note:
+
+Before building, get headers for vmmap and Symbolication:
+
+	$ class-dump -H -o vmutils /System/Library/PrivateFrameworks/vmutils.framework/vmutils 
+	$ class-dump -H -o Symbolication /System/Library/PrivateFrameworks/Symbolication.framework/Symbolication 
+
+Then within headers, remove all includes of NSObject.h. When trying to
+build, it will fail not being able to find include paths. Either add
+current dir to header search path, or change <>'s to ""'s.
+
